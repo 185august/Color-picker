@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color picker</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+
+        h4 {
+           margin-bottom: 5px; 
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 5px;
+            grid-row-gap: 5px;
+            width: 10px;
+        }
+
+        .container > div {
+            width: 50px;
+            height: 50px;
+            outline: solid 1px lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="div1" onclick="chooseColor(this)"></div>
+        <div class="div2" onclick="chooseColor(this)"></div>
+        <div class="div3" onclick="chooseColor(this)"></div>
+        <div class="div4" onclick="chooseColor(this)"></div>
+        <div class="div5" onclick="chooseColor(this)"></div>
+        <div class="div6" onclick="chooseColor(this)"></div>
+        <div class="div7" onclick="chooseColor(this)"></div>
+        <div class="div8" onclick="chooseColor(this)"></div>
+        <div class="div9" onclick="chooseColor(this)"></div>
+    </div>
+    <h4>Write the color you want</h4>
+    <input type="text" name="" id="whatColor">
+</body>
+
+<script>
+    function chooseColor(element) {
+        element.style.backgroundColor = document.getElementById('whatColor').value
+    }
+
+
+</script>
+
+</html>
